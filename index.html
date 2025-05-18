@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GROM – Arma Reforger Rekrutacja</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="background">
+<div class="overlay">
+<header>
+<h1>GROM – Arma Reforger</h1>
+<p>Dołącz do elitarnej jednostki! Rekrutacja otwarta.</p>
+</header>
+
+<section class="content">
+<h2>Formularz rekrutacyjny</h2>
+<form id="recruitForm">
+<label for="nickname">Nick w grze:</label>
+<input type="text" id="nickname" name="nickname" required />
+
+<label for="age">Wiek:</label>
+<input type="number" id="age" name="age" min="14" max="99" required />
+
+<label for="experience">Doświadczenie w Arma Reforger / innych symulatorach wojskowych:</label>
+<textarea id="experience" name="experience" rows="4" placeholder="Opisz swoje doświadczenie..."></textarea>
+
+<button type="submit" class="btn">Wyślij zgłoszenie</button>
+</form>
+
+<div class="discord-link">
+<p>Po więcej informacji dołącz do nas na Discordzie:</p>
+<a href="https://discord.gg/P3F5CCQw" target="_blank" rel="noopener" class="btn">Discord GROM</a>
+</div>
+</section>
+
+<footer>
+<p>© 2025 GROM – Arma Reforger | Wszelkie prawa zastrzeżone</p>
+</footer>
+</div>
+</div>
+
+<script>
+document.getElementById('recruitForm').addEventListener('submit', function(e) {
+e.preventDefault();
+const nickname = this.nickname.value.trim();
+const age = this.age.value;
+if (!nickname) {
+alert('Proszę podać nick w grze.');
+return;
+}
+if (age < 14 || age > 99) {
+alert('Wiek musi być pomiędzy 14 a 99 lat.');
+return;
+}
+alert('Dziękujemy za zgłoszenie! Skontaktujemy się wkrótce.');
+this.reset();
+});
+</script>
+</body>
+</html>

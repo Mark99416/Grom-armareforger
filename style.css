@@ -1,0 +1,128 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body, html {
+height: 100%;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color: #eee;
+}
+
+.background {
+background-image: url('https://images.unsplash.com/photo-1614850523453-b6c4b2a1b1e1?auto=format&fit=crop&w=1920&q=80');
+background-size: cover;
+background-position: center;
+height: 100vh;
+position: relative;
+}
+
+.overlay {
+background-color: rgba(0, 0, 0, 0.7);
+height: 100%;
+padding: 30px 20px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+header {
+text-align: center;
+margin-top: 40px;
+}
+
+header h1 {
+font-size: 3rem;
+margin-bottom: 10px;
+letter-spacing: 2px;
+}
+
+header p {
+font-size: 1.2rem;
+font-weight: 300;
+}
+
+.content {
+max-width: 450px;
+margin: 0 auto;
+background-color: rgba(20, 20, 20, 0.75);
+padding: 20px 25px;
+border-radius: 10px;
+}
+
+.content h2 {
+text-align: center;
+margin-bottom: 20px;
+font-weight: 600;
+letter-spacing: 1.5px;
+}
+
+form label {
+display: block;
+margin: 12px 0 5px;
+font-weight: 600;
+}
+
+form input[type="text"],
+form input[type="number"],
+form textarea {
+width: 100%;
+padding: 10px;
+border-radius: 6px;
+border: none;
+font-size: 1rem;
+}
+
+form textarea {
+resize: vertical;
+font-family: inherit;
+}
+
+.btn {
+display: inline-block;
+margin-top: 20px;
+width: 100%;
+background-color: #2e8b57;
+color: #fff;
+padding: 12px 0;
+font-size: 1.2rem;
+font-weight: 700;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+text-align: center;
+text-decoration: none;
+transition: background-color 0.3s;
+}
+
+.btn:hover {
+background-color: #246b45;
+}
+
+.discord-link {
+text-align: center;
+margin-top: 25px;
+}
+
+.discord-link p {
+margin-bottom: 10px;
+font-size: 1rem;
+}
+
+footer {
+text-align: center;
+font-size: 14px;
+margin-bottom: 20px;
+font-weight: 300;
+}
+
+@media (max-width: 600px) {
+header h1 {
+font-size: 2.2rem;
+}
+.content {
+max-width: 90%;
+padding: 15px 15px;
+}
+}
